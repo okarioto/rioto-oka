@@ -5,7 +5,7 @@ import ExpandBtn from "@/utils/ExpandBtn"
 export default function TechList(props) {
     const [isDown, setIsDown] = useState(true);
 
-    return (<section className="flex flex-col sm:w-[45%] mt-[5rem] sm:mt-9">
+    return (<section className="flex flex-col md:w-[45%] mt-[5rem] md:mt-9">
         <div className="flex justify-between items-center">
             <h2 className="text-[39px]">{props.title}</h2>
             <ExpandBtn isDown={isDown} setIsDown={setIsDown} />
