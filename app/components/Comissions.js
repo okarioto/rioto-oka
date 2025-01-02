@@ -15,6 +15,7 @@ export default function Comissions() {
             <div className={`flex flex-col justify-center items-center max-h-[20rem] duration-1000 overflow-hidden ${!isDown && 'contract-h'}`}>
                 <Project
                     title={'ROYAL NAILS'}
+                    link="https://royal-nails.vercel.app"
                     bullets={royalNails.bullets}
                     techs={royalNails.techs}
                     parentIsDown={isDown}

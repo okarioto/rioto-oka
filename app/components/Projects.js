@@ -15,12 +15,14 @@ export default function Projects() {
       <div className={`flex flex-col justify-center items-center max-h-[90rem] duration-1000 overflow-hidden ${!isDown && 'contract-h'}`}>
         <Project
           title={'EASY READER'}
+          link={'https://github.com/okarioto/Easy-Reader'}
           bullets={easyReader.bullets}
           techs={easyReader.techs}
           parentIsDown={isDown}
         />
         <Project
           title={'FLASH CARD'}
+          link={'https://github.com/okarioto/Flashcard-Simulator'}
           bullets={flashCards.bullets}
           techs={flashCards.techs}
           parentIsDown={isDown}

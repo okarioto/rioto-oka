@@ -11,7 +11,7 @@ export default function Project(props) {
     return (
         <section className="flex flex-col mb-[3.5rem] w-[95%] lg:w-[80%] align-self-center">
             <div className={`flex flex-wrap items-center justify-between pb-[1rem]`}>
-                <h2 className="text-[24px] tracking-[0.4rem] lg:tracking-[1.5rem]">{props.title} </h2>
+                <h2 className="text-[24px] tracking-[0.4rem] lg:tracking-[1.5rem]"> <a href={props.link} target="_blank">{props.title}</a>  </h2>
                 <p className="text-[12px] tracking-tight mr-auto order-last xl:order-none basis-full xl:basis-auto">
                   ( {props.techs.map((tech)=>{
                         return `${tech} `;
