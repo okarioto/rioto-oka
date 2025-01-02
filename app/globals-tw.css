@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  /* border: 1px red solid; */
+}
+
+body{
+font-family: "Xanh Mono", serif;
+font-weight: 100;
+}
+
+.flex-wrapper{
+  @apply flex justify-center items-center;
+}
+.content{
+  @apply flex-1
+}
+
+#welcome-text.expand{
+  max-width: 15rem;
+}
+
+.contract-h{
+  max-height: 0rem;
+}
+
+.hide{
+  @apply hidden;
+}
