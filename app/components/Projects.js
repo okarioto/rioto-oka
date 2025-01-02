@@ -7,8 +7,8 @@ import { royalNails, easyReader, flashCards } from "@/utils/project_dets";
 export default function Projects() {
   const [isDown, setIsDown] = useState(true);
   return (
-    <section className="flex flex-col mt-[13rem] w-[90%] align-self-center">
-      <div className={`flex items-center justify-between mb-10`}>
+    <section className="flex flex-col mt-[5rem] sm:mt-[13rem] w-[90%] align-self-center mb-[2rem]">
+      <div className={`flex items-center justify-between mb-[3rem]`}>
         <h2 className="text-[39px]">PROJECTS</h2>
         <ExpandBtn isDown={isDown} setIsDown={setIsDown} />
       </div>
