@@ -1,32 +1,94 @@
-@import url('https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   /* border: 1px red solid; */
 }
 
-body{
-font-family: "Xanh Mono", serif;
-font-weight: 100;
+body {
+  font-family: "Xanh Mono", serif;
+  font-weight: 100;
 }
 
-.flex-wrapper{
+.flex-wrapper {
   @apply flex justify-center items-center;
 }
-.content{
-  @apply flex-1
+.content {
+  @apply flex-1;
 }
 
-#welcome-text.expand{
-  max-width: 15rem;
-}
-
-.contract-h{
+.contract-h {
   max-height: 0rem;
 }
 
-.hide{
-  @apply hidden;
+#loading-bg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  inset: 0;
+  z-index: 50;
+  position: fixed;
+  background-color: rgba(229, 231, 235, 0.5);
+}
+
+#loading-bg.fade {
+  animation: fadeout 0.75s ease-out 0.25s 1;
+}
+
+@keyframes fadeout {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#loading-text {
+  max-width: 0;
+  overflow: hidden;
+  animation-timing-function: linear;
+  letter-spacing: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.25rem /* 28px */;
+  transition-duration: 1000ms;
+  transition-property: max-width;
+}
+
+#loading-text.expand {
+
+  max-width: 15rem;
+}
+
+#loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 2.25rem /* 36px */;
+  line-height: 2.5rem /* 40px */;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#expand-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition-duration: 400ms;
+  transition-timing-function: linear;
+}
+
+.rotate {
+  transform: rotate(180deg);
 }

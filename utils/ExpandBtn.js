@@ -11,6 +11,6 @@ export default function ExpandBtn(props) {
     }
 
     return (
-        <button className={`flex-wrapper ${!props.isDown && 'rotate-180'} ease-linear duration-300`} onClick={handleClick}><Image src={'/icons/down-icon.svg'} width={30} height={30} alt={'down icon'}></Image></button>
+        <button className={`${!props.isDown && 'rotate'}`} id="expand-btn" onClick={handleClick}><Image src={'/icons/down-icon.svg'} width={30} height={30} alt={'down icon'}></Image></button>
     );
 }

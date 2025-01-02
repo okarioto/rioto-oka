@@ -31,10 +31,10 @@ function LoadingOverlay(props) {
         updateShowingStates();
     }, []);
 
-    return (
-        <div className={`flex-wrapper h-screen w-screen z-50 fixed inset-0 bg-gray-200 bg-opacity-85 ${!isShowing.screen && 'animate-fadeout'} ${!isShowing.all && 'hide'}`}>
-            <div className={`flex-wrapper animate-spin text-4xl text-center ${!isShowing.spinner && 'hide'}`}>|</div>
-            <div className={`max-w-0 overflow-hidden duration-[1300ms] ease-linear tracking-[1rem] text-xl ${isShowing.text && 'expand'}`} id='welcome-text'>{props.text}</div>
+    return isShowing.all && (
+        <div className={`${!isShowing.screen && 'fade '}`} id="loading-bg">
+            {isShowing.spinner && (<div id="loading-spinner">|</div>)}
+            <div className={`${isShowing.text && 'expand'}`} id='loading-text'>{props.text}</div>
         </div>
     )
 }
