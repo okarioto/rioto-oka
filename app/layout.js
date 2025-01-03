@@ -8,9 +8,6 @@ import "./globals-tw.css";
 export const metadata = {
   title: "Rioto Oka",
   description: "Rioto Oka's Portfolio Website",
-  icons: {
-    icon: 'icons/favicon.svg'
-  }
 };
 
 export default function RootLayout({ children }) {

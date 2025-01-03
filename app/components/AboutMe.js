@@ -11,7 +11,7 @@ export default function AboutMe() {
                 <h2 className="text-[39px]">ABOUT ME</h2>
                 <ExpandBtn isDown={isDown} setIsDown={setIsDown} />
             </div>
-            <div className={`max-h-[25rem] duration-1000 overflow-scroll ${!isDown && 'contract-h'}`}>
+            <div className={`max-h-[27rem] duration-1000 overflow-scroll ${!isDown && 'contract-h'}`}>
                 <p className="md:tracking-[0.1rem] text-justify">
                     {aboutMeBlurb}
                 </p>

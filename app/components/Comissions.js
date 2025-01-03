@@ -12,7 +12,7 @@ export default function Comissions() {
                 <h2 className="text-[39px]">COMISSIONS</h2>
                 <ExpandBtn isDown={isDown} setIsDown={setIsDown} />
             </div>
-            <div className={`flex flex-col justify-center items-center max-h-[20rem] duration-1000 overflow-hidden ${!isDown && 'contract-h'}`}>
+            <div className={`flex flex-col justify-center items-center max-h-[23rem] duration-1000 overflow-hidden ${!isDown && 'contract-h'}`}>
                 <Project
                     title={'ROYAL NAILS'}
                     link="https://royal-nails.vercel.app"
