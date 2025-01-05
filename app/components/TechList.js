@@ -3,7 +3,7 @@ import { useState } from "react"
 import ExpandBtn from "@/utils/ExpandBtn"
 
 export default function TechList(props) {
-    const [isDown, setIsDown] = useState(true);
+    const [isDown, setIsDown] = useState(false);
 
     return (<section className="flex flex-col md:w-[45%] mt-[5rem] md:mt-9">
         <div className="flex justify-between items-center">

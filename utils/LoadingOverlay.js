@@ -14,7 +14,8 @@ function LoadingOverlay(props) {
     });
 
     async function updateShowingStates() {
-        await delay(1500);
+        const loadMs = Math.floor((Math.random()*1000));
+        await delay(loadMs);
         setIsShowing({ all: true, spinner: false, text: true, screen: true });
 
         await delay(1500);
