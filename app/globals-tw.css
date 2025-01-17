@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 * {
-  /* border: 1px red solid; */
+  border: 1px red solid;
 }
 
 body {
@@ -59,7 +59,6 @@ body {
 }
 
 #loading-text.expand {
-
   max-width: 15rem;
 }
 
@@ -83,8 +82,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  opacity: 0.5;
   transition-duration: 400ms;
   transition-timing-function: linear;
+}
+
+#expand-btn:hover {
+  opacity: 1;
 }
 
 .rotate {
