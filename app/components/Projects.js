@@ -12,7 +12,7 @@ export default function Projects() {
         <h2 className="text-[39px]">PROJECTS</h2>
         <ExpandBtn isDown={isDown} setIsDown={setIsDown} />
       </div>
-      <div className={`flex flex-col justify-center items-center max-h-[90rem] duration-1000 overflow-hidden ${!isDown && 'contract-h'}`}>
+      <div className={`flex flex-col justify-center items-center max-h-[114rem] duration-1000 overflow-hidden ${!isDown && 'contract-h'}`}>
 
         {projectDets.map((project, idx) => {
           return <Project
