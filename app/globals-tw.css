@@ -3,9 +3,9 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+/* * {
   border: 1px red solid;
-}
+} */
 
 body {
   font-family: "Xanh Mono", serif;
