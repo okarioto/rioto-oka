@@ -7,10 +7,38 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        'xs': '425px',
+    },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        thin: "#c0c0c0a0",
+        vertical: "#1434A4",
+        thickmain: "#fff",
+        thicksub: "#fff",
       },
+      fontFamily: {
+        main: ['Xanh Mono', 'serif'],
+        sub: ['JetBrains Mono', 'sans-serif'],
+        background: ['Inter', 'serif']
+      },
+      backgroundImage: {
+        'custom-bg': "url('/faded-bg.png')",
+      },
+      animation: {
+        'blink': "blink 0.5s step-end infinite"
+      },
+      keyframes: {
+        blink: {
+          "from, to": {
+            color: "transparent"
+          },
+          "50%": {
+            color: "black" 
+          }
+        }
+      }
     },
   },
   plugins: [],
