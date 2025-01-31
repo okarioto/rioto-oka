@@ -29,9 +29,9 @@ export default function DesktopAbout() {
 
     return (
         <div id="about" className="hidden md:flex w-full min-h-[50rem] justify-center items-center mt-1 mb-1">
-            <div className="w-[95%] h-[95%] flex justify-between items-center">
-                <div className="h-full flex flex-[15%] flex-col items-center">
-                    <div className="w-full mb-10 mt-52 flex justify-center">
+            <div className="w-[95%] h-[95%] flex justify-between items-start">
+                <div className="h-full flex flex-[15%] flex-col items-center justify-center">
+                    <div className="w-full mb-10 mt-[13vw] flex justify-center">
                         <TechCard title="languages" techs={languages} />
                     </div>
                     <div className="w-full flex justify-center">
@@ -40,8 +40,8 @@ export default function DesktopAbout() {
                 </div>
                 <div className="h-full flex flex-[60%] flex-col items-center ml-10">
                     <div ref={titleLineRef} className="flex items-center justify-center">
-                        <hr className="h-[calc(0.4*13vw)] bg-thickmain absolute right-0 -z-10 duration-1000 border-0" 
-                        style={{width: isTitleLineInView? "100vw":"0"}}/>
+                        <hr className="h-[calc(0.4*13vw)] bg-thickmain absolute right-0 -z-10 duration-1000 border-0"
+                            style={{ width: isTitleLineInView ? "100vw" : "0" }} />
                         <h2 className="font-main text-[13vw] tracking-[calc(0.5*13vw)] w-full leading-none text-center after:content-['T'] after:tracking-[0]">ABOU</h2>
                     </div>
 

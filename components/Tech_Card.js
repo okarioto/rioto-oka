@@ -24,14 +24,14 @@ export default function TechCard({ title, techs, isItalic }) {
                 borderRadius: isInView ? "0" : "30%",
             }}
         >
-            <div className="duration-700 delay-300 flex flex-col" style={{opacity : isInView ? "1": "0"}}>
+            <div className="duration-700 delay-300 flex flex-col w-full" style={{opacity : isInView ? "1": "0"}}>
 
                 {!isItalic && <h3 className="font-main text-[8vw] w-full uppercase tracking-widest text-right md:text-[3vw]">{title}</h3>}
                 {isItalic && <h3 className="font-main text-[10vw] w-full italic uppercase tracking-widest text-right md:text-[3vw]"
                    >{title}</h3> }
-                <ul className="w-full ">
+                <ul className="w-full">
                     {techs.map((tech, idx) => {
-                        return <li key={idx} className="font-main text-[5vw] leading-tight tracking-widest text-right md:text-[1.8vw] ">
+                        return <li key={idx} className="w-full font-main text-[5vw] leading-tight tracking-widest text-right md:text-[1.8vw] mb-1">
                             {`"${tech}"`}
                         </li>
                     })}

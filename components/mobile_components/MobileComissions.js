@@ -31,7 +31,7 @@ export default function MobileComissions() {
                 <div ref={titleRef} className="flex items-center w-full justify-center">
                     <hr className="h-[calc(0.5*18vw)] absolute right-0 bg-thickmain -z-10 duration-1000"
                         style={{ width: isTitleInView ? "100vw" : "0" }} />
-                    <h2  className="w-full font-main text-[18vw] tracking-[0] leading-none text-center">COMISSIONS</h2>
+                    <h2 className="w-full font-main text-[18vw] tracking-[0] leading-none text-center">COMISSIONS</h2>
                 </div>
                 {comission_list.map((comission, idx) => {
                     return (

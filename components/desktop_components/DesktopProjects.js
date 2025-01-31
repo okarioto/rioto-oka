@@ -29,7 +29,7 @@ export default function DesktopProjects() {
         <div id="projects" className="hidden md:flex min-h-screen w-full justify-center items-center mt-1 mb-1 overflow-x-hidden">
             <div className="grid grid-cols-7 w-[95%] min-h-[95vh] ">
                 <div className="flex justify-center items-center col-start-2 ">
-                    <hr ref={lineRef} className="w-[calc(0.5*18.75vh)] h-0  bg-vertical fixed top-0 -z-20 duration-[2000ms] ease-linear" />
+                    <hr ref={lineRef} className="w-[calc(0.5*18.75vh)] h-0  bg-vertical fixed top-0 -z-20 duration-[1000ms] ease-linear" />
                     <h2 className="font-main -rotate-90 text-[18.75vh] tracking-[2vh] leading-none">PROJECTS</h2>
 
                 </div>
