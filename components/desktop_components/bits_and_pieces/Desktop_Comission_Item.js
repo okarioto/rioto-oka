@@ -25,7 +25,7 @@ export default function DesktopComissionItem({ title, techs, idx }) {
             <p className="font-main text-[1vw] absolute left-1/2 opacity-0 group-hover:opacity-100 duration-300">click to see more</p>
                 <h2 className="ml-[4rem] font-main text-[5vw] tracking-[0rem] w-full leading-tight text-left capitalize group-hover:opacity-40 duration-300">{`"${title}">`}</h2>
             </Link>
-            <div className="flex items-center h-[calc(0.5*1.75vw)] -ml-[4rem]  bg-thin duration-[1500ms]"
+            <div className="flex items-center h-[calc(0.5*1.75vw)] -ml-[4rem]  bg-thin duration-[1500ms] mt-2"
             style={{width: isInView ? "120vw" : "0"}}>
                 <p className="font-main text-[1.75vw]  font-extralight ml-[4rem] text-nowrap">
                     With

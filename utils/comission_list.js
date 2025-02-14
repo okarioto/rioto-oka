@@ -3,7 +3,7 @@ const royal_nails = {
     link: "https://royal-nails.vercel.app",
     bullets: ["Developed a fully responsive webpage for a local nail salon business using Next.js, JavaScript, HTML, and CSS, featuring a contact page and optimized for seamless performance across devices.",
         "Designed reusable React components to maintain consistency and improve development efficiency, while ensuring smooth user experience on mobile and desktop views.", "Overcame challenges in optimizing responsiveness through raw CSS and enhanced performance and SEO using Next.js features like server-side rendering (SSR)." ],
-    techs: ["JavaScript", "nextJS", "reactJS",  "HTML", "CSS"]
+    techs: ["JavaScript", "nextJS", "reactJS", "Tailwind", "HTML", "CSS"]
 }
 const badminton_club = {
     title: "badminton club", link: "https://github.com/Dom4489/UBC-BC-APP-",

@@ -42,7 +42,9 @@ export default function DesktopAbout() {
                     <div ref={titleLineRef} className="flex items-center justify-center">
                         <hr className="h-[calc(0.4*13vw)] bg-thickmain absolute right-0 -z-10 duration-1000 border-0"
                             style={{ width: isTitleLineInView ? "100vw" : "0" }} />
-                        <h2 className="font-main text-[13vw] tracking-[calc(0.5*13vw)] w-full leading-none text-center after:content-['T'] after:tracking-[0]">ABOU</h2>
+                        <h2 className="font-main text-[13vw] tracking-[calc(0.5*13vw)] w-full leading-none text-center -mr-[calc(0.5*13vw)]">
+                            ABOUT
+                            </h2>
                     </div>
 
                     <div ref={aboutmeRef} className="w-[75%] relative right-[1%] bottom-[1%]  bg-[#c0c0c080] mt-7 duration-700"

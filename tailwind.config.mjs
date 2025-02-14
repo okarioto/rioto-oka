@@ -13,8 +13,8 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        thin: "#c0c0c0a0",
-        vertical: "#1434A4",
+        thin: "#c0c0c080",
+        vertical: "#fff",
         thickmain: "#fff",
         thicksub: "#fff",
       },

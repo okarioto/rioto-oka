@@ -26,7 +26,7 @@ export default function DesktopProjectItem({ title, techs, idx }) {
                 <h2 className=" -ml-[4rem] font-main text-[5vw] tracking-[0rem] leading-tight text-right capitalize w-full group-hover:opacity-20 duration-300">{`<"${title}"`}</h2>
             </Link>
 
-            <div className="flex items-center justify-end self-end h-[calc(0.5*1.75vw)] -mr-[3vw]  bg-thin  duration-[1500ms] -z-20"
+            <div className="flex items-center justify-end self-end h-[calc(0.5*1.75vw)] -mr-[3vw]  bg-thin  duration-[1500ms] -z-20 mt-2"
                 style={{ width: isInView ? "103vw" : "0" }}>
                 <p className="font-main text-[1.75vw]  font-extralight mr-[3vw] text-nowrap">
                     With {techs.map((tech) => {
