@@ -4,6 +4,7 @@ import "./globals-tw.css";
 export const metadata = {
   title: "Rioto Oka",
   description: "Rioto Oka's Personal Portfolio Website",
+  keywords: "web development, 利緒人　岡, リオト　オカ, りおと, おか, 利緒人, 岡",
   icons: {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" }, 

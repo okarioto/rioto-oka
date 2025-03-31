@@ -13,7 +13,7 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        thin: "#c0c0c080",
+        thin: "#c0c0c0b0",
         vertical: "#fff",
         thickmain: "#fff",
         thicksub: "#fff",
