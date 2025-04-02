@@ -24,7 +24,7 @@ export default {
         background: ['Inter', 'serif']
       },
       backgroundImage: {
-        'custom-bg': "url('/faded-bg.png')",
+        'custom-bg': "url('/bg.png')",
       },
       animation: {
         'blink': "blink 0.5s step-end infinite"

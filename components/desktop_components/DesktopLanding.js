@@ -66,7 +66,7 @@ export default function DesktopLanding() {
             <div className="w-[95%] h-[95%] flex flex-col justify-between">
                 <div className="flex justify-between">
                     <ul className="flex flex-col">
-                        <li className=" group w-full hover:bg-white hover:bg-opacity-65  duration-200 ">
+                        <li className=" group w-full  hover:bg-opacity-65  duration-200 ">
                             <Link href={"/#about"} className=" flex flex-col items-start font-main text-[4vw] tracking-[0.5rem] leading-tight h-[5vw] overflow-hidden ">
                                 <p ref={aboutRef} className={`duration-500 ${isDoneTyping && "group-hover:-translate-y-[15vw]"} `}></p>
                                 {isDoneTyping && <p className=" group-hover:-translate-y-[15vw] duration-500">about</p>}
@@ -75,7 +75,7 @@ export default function DesktopLanding() {
                             </Link>
                         </li>
 
-                        <li className="group flex w-full justify-between hover:bg-white hover:bg-opacity-65 duration-200 ">
+                        <li className="group flex w-full justify-between  hover:bg-opacity-65 duration-200 ">
                             <Link href={"/#comissions"} className="  flex flex-col items-start font-main text-[4vw] tracking-[0.5rem] leading-tight h-[5vw] overflow-hidden mr-3 ">
                                 <p ref={comissionRef} className={`duration-500 ${isDoneTyping && "group-hover:-translate-y-[15vw]"} `}></p>
                                 {isDoneTyping && <p className=" group-hover:-translate-y-[15vw] duration-500">comissions</p>}
@@ -99,7 +99,7 @@ export default function DesktopLanding() {
                             </ul>
                         </li>
 
-                        <li className=" group flex w-full justify-between  hover:bg-white hover:bg-opacity-65 duration-200">
+                        <li className=" group flex w-full justify-between   hover:bg-opacity-65 duration-200">
                             <Link href={"/#projects"} className="w-full flex flex-col items-start font-main text-[4vw] tracking-[0.5rem] leading-tight h-[5vw] overflow-hidden mr-3 ">
                                 <p ref={projectRef} className={`duration-500 ${isDoneTyping && "group-hover:-translate-y-[15vw]"} `}></p>
                                 {isDoneTyping && <p className=" group-hover:-translate-y-[15vw] duration-500">projects</p>}
@@ -122,7 +122,7 @@ export default function DesktopLanding() {
                             </ul>
                         </li>
 
-                        <li className="group w-full hover:bg-white hover:bg-opacity-65 duration-200" >
+                        <li className="group w-full hover:bg-opacity-65 duration-200" >
                             <Link href={"/#contact"} className="group flex flex-col items-start font-main text-[4vw] tracking-[0.5rem] leading-tight h-[5vw] overflow-hidden ">
                                 <p ref={contactRef} className={`duration-500 ${isDoneTyping && "group-hover:-translate-y-[15vw]"} `}></p>
                                 {isDoneTyping && <p className=" group-hover:-translate-y-[15vw] duration-500">contact</p>}
