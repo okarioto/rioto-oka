@@ -6,22 +6,22 @@ import HamburgerExpander from "../Hamburger_Expander";
 import typewriter from "@/utils/typwriter";
 import get_date from "@/utils/get_date";
 import { project_list } from "@/utils/project_list";
-import { comission_list } from "@/utils/comission_list";
+import { experience_list } from "@/utils/experience_list";
 
 export default function DesktopLanding() {
 
     const fullDate = get_date();
     const [isDoneTyping, setIsDoneTyping] = useState(false);
-    const [comissionsIsDown, setComissionsIsDown] = useState(false);
+    const [experiencesIsDown, setExperiencesIsDown] = useState(false);
     const [projectsIsDown, setProjectsIsDown] = useState(false);
-    const [comissionsHeight, setComissionsHeight] = useState(0);
+    const [experiencesHeight, setExperiencesHeight] = useState(0);
     const [projectsHeight, setProjectsHeight] = useState(0);
 
     const calledRef = useRef(false);
     const nameRef = useRef(null);
     const aboutRef = useRef(null);
-    const comissionRef = useRef(null);
-    const comissionsRef = useRef(null);
+    const experienceRef = useRef(null);
+    const experiencesRef = useRef(null);
     const projectRef = useRef(null);
     const projectsRef = useRef(null);
     const contactRef = useRef(null);
@@ -39,7 +39,7 @@ export default function DesktopLanding() {
             await delay(200)
             typewriter(projectRef, "projects", 200)
             await delay(300)
-            typewriter(comissionRef, "comissions", 150)
+            typewriter(experienceRef, "experience", 150)
             await typewriter(dateRef, fullDate, 100)
             await typewriter(nameRef, "RIOTO OKA", 250)
             document.body.classList.remove("overflow-hidden");
@@ -51,14 +51,14 @@ export default function DesktopLanding() {
 
     useEffect(() => {
         function handleResize() {
-            if (comissionsRef.current) { setComissionsHeight(comissionsRef.current.scrollHeight); }
+            if (experiencesRef.current) { setExperiencesHeight(experiencesRef.current.scrollHeight); }
             if (projectsRef.current) { setProjectsHeight(projectsRef.current.scrollHeight); }
         };
 
         handleResize()
         window.addEventListener("resize", handleResize);
         return () => window.removeEventListener("resize", handleResize);
-    }, [comissionsIsDown, projectsIsDown]);
+    }, [experiencesIsDown, projectsIsDown]);
 
 
     return (
@@ -76,24 +76,24 @@ export default function DesktopLanding() {
                         </li>
 
                         <li className="group flex w-full justify-between  hover:bg-opacity-65 duration-200 ">
-                            <Link href={"/#comissions"} className="  flex flex-col items-start font-main text-[4vw] tracking-[0.5rem] leading-tight h-[5vw] overflow-hidden mr-3 ">
-                                <p ref={comissionRef} className={`duration-500 ${isDoneTyping && "group-hover:-translate-y-[15vw]"} `}></p>
-                                {isDoneTyping && <p className=" group-hover:-translate-y-[15vw] duration-500">comissions</p>}
-                                {isDoneTyping && <p className=" group-hover:-translate-y-[15vw] duration-500">comissions</p>}
-                                {isDoneTyping && <p className=" group-hover:-translate-y-[15vw] duration-500">comissions</p>}
+                            <Link href={"/#experiences"} className="  flex flex-col items-start font-main text-[4vw] tracking-[0.5rem] leading-tight h-[5vw] overflow-hidden mr-3 ">
+                                <p ref={experienceRef} className={`duration-500 ${isDoneTyping && "group-hover:-translate-y-[15vw]"} `}></p>
+                                {isDoneTyping && <p className=" group-hover:-translate-y-[15vw] duration-500">experience</p>}
+                                {isDoneTyping && <p className=" group-hover:-translate-y-[15vw] duration-500">experience</p>}
+                                {isDoneTyping && <p className=" group-hover:-translate-y-[15vw] duration-500">experience</p>}
                             </Link>
-                            {isDoneTyping && <HamburgerExpander isClicked={comissionsIsDown} setIsClicked={setComissionsIsDown} />}
+                            {isDoneTyping && <HamburgerExpander isClicked={experiencesIsDown} setIsClicked={setExperiencesIsDown} />}
 
                         </li>
 
                         <li className="overflow-hidden duration-700" style={{
-                            height: comissionsIsDown ? `${comissionsHeight}px` : "0",
+                            height: experiencesIsDown ? `${experiencesHeight}px` : "0",
                         }}>
-                            <ul ref={comissionsRef} >
-                                {comission_list.map((comission, idx) => {
+                            <ul ref={experiencesRef} >
+                                {experience_list.map((experience, idx) => {
                                     return (
-                                        <li key={idx}  className="w-full flex font-main text-[1.75vw] bg-white bg-opacity-0 duration-200 hover:bg-opacity-65 cursor-pointer">
-                                            <Link  href={`/comission/${idx}`} className="w-full lowercase"> {`"${comission.title}"`}</Link>
+                                        <li key={idx} className="w-full flex font-main text-[1.75vw] bg-white bg-opacity-0 duration-200 hover:bg-opacity-65 cursor-pointer">
+                                            <Link href={`/experience/${idx}`} className="w-full lowercase"> {`"${experience.title}"`}</Link>
                                         </li>)
                                 })}
                             </ul>
@@ -116,7 +116,7 @@ export default function DesktopLanding() {
                                 {project_list.map((project, idx) => {
                                     return (
                                         <li key={idx} className="w-full flex font-main text-[1.75vw] bg-white bg-opacity-0 duration-200 hover:bg-opacity-65 cursor-pointer">
-                                            <Link  href={`/project/${idx}`} className="w-full lowercase"> {`"${project.title}"`}</Link>
+                                            <Link href={`/project/${idx}`} className="w-full lowercase"> {`"${project.title}"`}</Link>
                                         </li>)
                                 })}
                             </ul>

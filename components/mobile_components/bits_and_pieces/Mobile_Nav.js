@@ -2,27 +2,27 @@
 import { useState, useRef, useEffect } from "react"
 import Link from "next/link"
 import HamburgerExpander from "@/components/Hamburger_Expander";
-import { comission_list } from "@/utils/comission_list";
+import { experience_list } from "@/utils/experience_list";
 import { project_list } from "@/utils/project_list";
 
 export default function MobileNav() {
-    const comissionsRef = useRef(null);
+    const experiencesRef = useRef(null);
     const projectsRef = useRef(null);
     const navRef = useRef(null);
 
 
-    const [comissionsIsDown, setComissionsIsDown] = useState(false);
+    const [experiencesIsDown, setExperiencesIsDown] = useState(false);
     const [projectsIsDown, setProjectsIsDown] = useState(false);
     const [navIsDown, setNavIsDown] = useState(0);
-    const [comissionsHeight, setComissionsHeight] = useState(0);
+    const [experiencesHeight, setExperiencesHeight] = useState(0);
     const [projectsHeight, setProjectsHeight] = useState(0);
     const [navHeight, setNavHeight] = useState(0);
 
     useEffect(() => {
-        if (!comissionsIsDown) { setNavHeight(navRef.current.clientHeight - comissionsHeight); }
-        if (comissionsIsDown) { setNavHeight(navRef.current.clientHeight + comissionsHeight); }
-        if (comissionsRef.current) {setComissionsHeight(comissionsRef.current.scrollHeight);}
-    }, [comissionsIsDown])
+        if (!experiencesIsDown) { setNavHeight(navRef.current.clientHeight - experiencesHeight); }
+        if (experiencesIsDown) { setNavHeight(navRef.current.clientHeight + experiencesHeight); }
+        if (experiencesRef.current) { setExperiencesHeight(experiencesRef.current.scrollHeight); }
+    }, [experiencesIsDown])
 
     useEffect(() => {
         if (!projectsIsDown) { setNavHeight(navRef.current.scrollHeight - projectsHeight); }
@@ -35,7 +35,7 @@ export default function MobileNav() {
 
 
         function handleResize() {
-            if (comissionsRef.current) { setComissionsHeight(comissionsRef.current.scrollHeight); }
+            if (experiencesRef.current) { setExperiencesHeight(experiencesRef.current.scrollHeight); }
             if (projectsRef.current) { setProjectsHeight(projectsRef.current.scrollHeight); }
             if (navRef.current) { setNavHeight(navRef.current.scrollHeight); }
         }
@@ -54,7 +54,7 @@ export default function MobileNav() {
                 style={{ height: navIsDown ? `${navHeight}px` : '0' }}
             >
                 <ul ref={navRef} className="w-full flex flex-col items-end"
-            
+
                 >
 
                     <li className="flex justify-start">
@@ -66,17 +66,17 @@ export default function MobileNav() {
 
                     <li className="flex flex-col items-end">
                         <p className=" text-right font-main text-[5vw] xs:text-[21px] cursor-pointer"
-                            onClick={() => setComissionsIsDown(!comissionsIsDown)}
-                        >comissions</p>
-                        <ul ref={comissionsRef} className="w-full overflow-hidden duration-700"
-                            style={{ height: comissionsIsDown ? `${comissionsHeight}px` : '0' }}>
+                            onClick={() => setExperiencesIsDown(!experiencesIsDown)}
+                        >experiences</p>
+                        <ul ref={experiencesRef} className="w-full overflow-hidden duration-700"
+                            style={{ height: experiencesIsDown ? `${experiencesHeight}px` : '0' }}>
                             <li className="flex w-full">
-                                <Link href={`/#mobile-comissions`} className="w-full text-right font-main text-[3vw] lowercase">"all"</Link>
+                                <Link href={`/#mobile-experiences`} className="w-full text-right font-main text-[3vw] lowercase">"all"</Link>
                             </li>
-                            {comission_list.map((comission, idx) => {
+                            {experience_list.map((experience, idx) => {
                                 return (
                                     <li key={idx} className="flex w-full">
-                                        <Link href={`/comission/${idx}`} className="w-full text-right font-main text-[3vw] lowercase">{`"${comission.title}"`}</Link>
+                                        <Link href={`/experience/${idx}`} className="w-full text-right font-main text-[3vw] lowercase">{`"${experience.title}"`}</Link>
                                     </li>)
                             })}
 

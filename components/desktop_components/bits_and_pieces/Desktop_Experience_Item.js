@@ -2,7 +2,7 @@
 import Link from "next/link"
 import { useRef, useEffect, useState } from "react"
 
-export default function DesktopComissionItem({ title, techs, idx }) {
+export default function DesktopExperienceItem({ title, techs, idx }) {
     const lineRef = useRef();
     const [isInView, setIsInView] = useState(false)
 
@@ -21,7 +21,7 @@ export default function DesktopComissionItem({ title, techs, idx }) {
 
     return (
         <div ref={lineRef}  className="flex flex-col">
-            <Link  href={`/comission/${idx}`} className="group w-[120vw] -ml-[4rem] hover:bg-white hover:bg-opacity-65 flex items-center duration-300">
+            <Link  href={`/experience/${idx}`} className="group w-[120vw] -ml-[4rem] hover:bg-white hover:bg-opacity-65 flex items-center duration-300">
             <p className="font-main text-[1vw] absolute left-1/2 opacity-0 group-hover:opacity-100 duration-300">click to see more</p>
                 <h2 className="ml-[4rem] font-main text-[5vw] tracking-[0rem] w-full leading-tight text-left capitalize group-hover:opacity-40 duration-300">{`"${title}">`}</h2>
             </Link>

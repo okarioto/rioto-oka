@@ -2,14 +2,14 @@
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { useParams } from "next/navigation";
-import { comission_list } from "@/utils/comission_list";
+import { experience_list } from "@/utils/experience_list";
 import TechCard from "@/components/Tech_Card";
 import typewriter from "@/utils/typwriter";
 import MobileNav from "@/components/mobile_components/bits_and_pieces/Mobile_Nav";
 
-export default function ComissionPage() {
+export default function ExperiencePage() {
     const { slug } = useParams();
-    const comission = comission_list[slug]
+    const experience = experience_list[slug]
 
 
     const calledRef = useRef(false);
@@ -26,8 +26,8 @@ export default function ComissionPage() {
         async function callTypewriter() {
             if (calledRef.current) return;
             calledRef.current = true;
-            await typewriter(desktopTitleRef, comission.title, 200)
-            await typewriter(mobileTitleRef, comission.title, 200)
+            await typewriter(desktopTitleRef, experience.title, 200)
+            await typewriter(mobileTitleRef, experience.title, 200)
         }
         callTypewriter()
         if (desktopDescriptionCardRef.current) {
@@ -60,15 +60,15 @@ export default function ComissionPage() {
                 <div className="flex flex-col items-center justify-around h-[95%]">
                     <div className="flex items-center justify-center">
                         <hr ref={desktopTitleLineRef} className=" w-0 h-[calc(0.4*10.5vw)] bg-thicksub  absolute right-0 -z-10 duration-1000" />
-                        <h2 ref={desktopTitleRef} className="font-main text-[10.5vw] tracking-[calc(0.1*vw)] leading-none text-center uppercase text-nowrap after:content-['|'] after:animate-blink"></h2>
+                        <h2 ref={desktopTitleRef} className="font-main text-[8vw] tracking-[calc(0.1*vw)] leading-none text-center uppercase text-nowrap after:content-['|'] after:animate-blink"></h2>
                     </div>
                     <div className="grid grid-cols-5">
                         <div className="col-span-3 flex items-center justify-center">
-                            <div ref={desktopDescriptionCardRef} className="flex flex-col w-[60%] justify-center items-center bg-[#c0c0c080]  rounded-[40%] duration-1000 ">
+                            <div ref={desktopDescriptionCardRef} className="flex flex-col w-[60%] justify-center items-center bg-[#c0c0c080]  rouded-[40%] duration-1000 ">
                                 <div ref={desktopBlurbRef} className="relative bottom-[2vw] right-[2vw] duration-700 delay-500 opacity-0">
                                     <h3 className="font-main italic text-[3vw] text-start ">DETAILS</h3>
                                     <ul className="w-full">
-                                        {comission.bullets.map((bullet, idx) => {
+                                        {experience.bullets.map((bullet, idx) => {
                                             return <li key={idx} className="font-main text-[1.4vw] text-justify mt-2 list-disc">{` ${bullet}`}</li>
                                         })}
                                     </ul>
@@ -77,12 +77,11 @@ export default function ComissionPage() {
                         </div>
                         <div className="col-span-2 flex flex-col items-center justify-between">
                             <div className="w-[80%]">
-
-                                <TechCard title="technologies" techs={comission.techs} />
+                                <TechCard title="technologies" techs={experience.techs} />
                             </div>
                             <div className="flex w-[90%] justify-between">
-                                <Link className="font-main text-[4vw] tracking-[calc(0.5*4vw)] underline" href={"/#comissions"}>BACK</Link>
-                                <a className="font-main text-[4vw] tracking-[calc(0.5*4vw)] underline" href={comission.link} target="_blank">VIEW</a>
+                                <Link className="font-main text-[4vw] tracking-[calc(0.5*4vw)] underline" href={"/#experiences"}>BACK</Link>
+                                <a className="font-main text-[4vw] tracking-[calc(0.5*4vw)] underline" href={experience.link} target="_blank">VIEW</a>
                             </div>
                         </div>
                     </div>
@@ -97,7 +96,7 @@ export default function ComissionPage() {
                 <div className="flex flex-col items-center justify-start h-[95vh] w-[90vw]">
                     <div className="flex items-center justify-center w-full">
                         <hr ref={mobileTitleLineRef} className=" w-0 h-[calc(0.5*10vw)] bg-thin  absolute right-0 -z-10 duration-1000" />
-                        <h3 ref={mobileTitleRef} className="w-full font-main text-nowrap text-[12vw] after:content-['|'] after:animate-blink text-center capitalize"></h3>
+                        <h3 ref={mobileTitleRef} className="w-full font-main text-nowrap text-[8vw] after:content-['|'] after:animate-blink text-center capitalize"></h3>
                     </div>
                     <div className="w-full">
                         <MobileNav />
@@ -105,10 +104,10 @@ export default function ComissionPage() {
                     <div className="w-full flex justify-center mt-[7vw]">
                         <div ref={mobileDescriptionCardRef} className="flex flex-col w-[95%] relative top-[3vw] left-[2vw]  justify-center items-center bg-[#c0c0c080]  rounded-[40%] duration-1000 ">
                             <div ref={mobileBlurbRef} className="relative bottom-[6vw] right-[4vw] duration-700 delay-500 opacity-0">
-                                <h3 className="font-main italic text-[7vw] text-start ">DETAILS</h3>
+                                <h3 className="font-main italic text-[5vw] text-start ">DETAILS</h3>
                                 <ul className="w-full">
-                                    {comission.bullets.map((bullet, idx) => {
-                                        return <li key={idx} className="font-main text-[4vw] text-justify mt-1 tracking-tighter list-disc">{` ${bullet}`}</li>
+                                    {experience.bullets.map((bullet, idx) => {
+                                        return <li key={idx} className="font-main text-[3vw] text-justify mt-1 tracking-tighter list-disc">{` ${bullet}`}</li>
                                     })}
                                 </ul>
                             </div>
@@ -117,12 +116,12 @@ export default function ComissionPage() {
                     </div>
 
                     <div className="w-full mt-8">
-                        <TechCard title="technologies" techs={comission.techs} />
+                        <TechCard title="technologies" techs={experience.techs} />
                     </div>
 
                     <div className="flex w-full justify-between mt-4">
-                        <Link className="font-main text-[10vw] tracking-[calc(0.5*4vw)] underline" href={"/#mobile-comissions"}>BACK</Link>
-                        <a className="font-main text-[10vw] tracking-[calc(0.5*4vw)] underline" href={comission.link} target="_blank">VIEW</a>
+                        <Link className="font-main text-[10vw] tracking-[calc(0.5*4vw)] underline" href={"/#mobile-experiences"}>BACK</Link>
+                        <a className="font-main text-[10vw] tracking-[calc(0.5*4vw)] underline" href={experience.link} target="_blank">VIEW</a>
                     </div>
 
                 </div>

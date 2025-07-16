@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth duration-1000">
       <body className="min-h-screen bg-custom-bg bg-contain">
-        <div className="fixed inset-0 bg-white opacity-55 -z-20"></div> {/* Dark overlay */}
+        <div className="fixed inset-0 bg-white opacity-60 -z-40"></div> {/* Dark overlay */}
         {children}
       </body>
     </html>
