@@ -27,17 +27,17 @@ export default function MobileContact() {
                     <ul>
                         <li className=' flex hover:bg-white hover:bg-opacity-60 duration-100 w-[105vw] ml-[-5vw]'>
                             <a href='https://www.linkedin.com/in/okarioto' target='_blank' className='w-full font-main text-[7vw] tracking-[calc(0.1*3.5vw)] ml-[5vw]'>
-                                'LINKEDIN'
+                                "LINKEDIN"
                             </a>
                         </li>
                         <li className=' flex hover:bg-white hover:bg-opacity-60 duration-100 w-[105vw] ml-[-5vw]'>
                             <a href='https://github.com/okarioto' target='_blank' className='w-full font-main text-[7vw] tracking-[calc(0.1*3.5vw)]   ml-[5vw]'>
-                                'GITHUB'
+                                "GITHUB"
                             </a>
                         </li>
                         <li className=' flex hover:bg-white hover:bg-opacity-60 duration-100 w-[105vw] ml-[-5vw]'>
                             <a href='mailto:contact@rioto-oka.com' target='_blank' className='w-full font-main text-[7vw] tracking-[calc(0.1*3.5vw)]  ml-[5vw]'>
-                                'EMAIL'
+                                "EMAIL"
                             </a>
                         </li>
                     </ul>

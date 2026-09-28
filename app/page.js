@@ -15,12 +15,12 @@ export default function Home() {
       <DesktopLanding />
       <DesktopAbout />
       <DesktopExperiences />
-      <DesktopProjects />
+      {/* <DesktopProjects /> */}
       <DesktopContact />
       <MobileLanding />
       <MobileAbout/>
       <MobileExperiences />
-      <MobileProjects />
+      {/* <MobileProjects /> */}
       <MobileContact />
 
     </div>)

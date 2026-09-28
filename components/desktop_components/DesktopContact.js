@@ -31,15 +31,15 @@ export default function DesktopContact() {
                     <ul className='w-[120vw]'>
 
                         <li className='w-full flex ml-[4rem] hover:bg-white hover:bg-opacity-60 duration-100'>
-                            <a href='mailto:contact@rioto-oka.com' target='_blank' className='font-main text-[3.5vw] tracking-[calc(0.1*3.5vw)] text-right w-full -ml-[4rem]'>'EMAIL'</a>
+                            <a href='mailto:contact@rioto-oka.com' target='_blank' className='font-main text-[3.5vw] tracking-[calc(0.1*3.5vw)] text-right w-full -ml-[4rem]'>"EMAIL"</a>
                         </li>
 
                         <li className='w-full flex ml-[4rem] hover:bg-white hover:bg-opacity-60 duration-100'>
-                            <a href='https://github.com/okarioto' target='_blank' className='font-main text-[3.5vw] tracking-[calc(0.1*3.5vw)] text-right w-full -ml-[4rem]'>'GITHUB'</a>
+                            <a href='https://github.com/okarioto' target='_blank' className='font-main text-[3.5vw] tracking-[calc(0.1*3.5vw)] text-right w-full -ml-[4rem]'>"GITHUB"</a>
                         </li>
 
                         <li className='w-full flex ml-[4rem] hover:bg-white hover:bg-opacity-60 duration-100'>
-                            <a href='https://www.linkedin.com/in/okarioto' target='_blank' className='font-main text-[3.5vw] tracking-[calc(0.1*3.5vw)] text-right w-full -ml-[4rem]'>'LINKEDIN'</a>
+                            <a href='https://www.linkedin.com/in/okarioto' target='_blank' className='font-main text-[3.5vw] tracking-[calc(0.1*3.5vw)] text-right w-full -ml-[4rem]'>"LINKEDIN"</a>
                         </li>
 
 

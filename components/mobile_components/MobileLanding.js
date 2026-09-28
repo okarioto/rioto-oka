@@ -97,7 +97,7 @@ export default function MobileLanding() {
                             })}
 
                         </ul>
-                        <li className=' group flex w-full justify-between  hover:bg-white hover:bg-opacity-65 duration-200'>
+                        {/* <li className=' group flex w-full justify-between  hover:bg-white hover:bg-opacity-65 duration-200'>
                             <Link href={'/#mobile-projects'} className='w-full flex flex-col items-start font-main text-[12vw] tracking-[0.5vw] leading-tight h-[14vw] overflow-hidden mr-3  xs:text-[50px] xs:h-[60px]'>
                                 <p ref={projectRef} className={`duration-500 ${isDoneTyping && 'group-hover:-translate-y-[56vw]'} `}></p>
                                 {isDoneTyping && <p className=' group-hover:-translate-y-[45vw] duration-500 xs:group-hover:-translate-y-[190px]'>projects</p>}
@@ -105,7 +105,7 @@ export default function MobileLanding() {
                                 {isDoneTyping && <p className=' group-hover:-translate-y-[45vw] duration-500 xs:group-hover:-translate-y-[190px]'>projects</p>}
                             </Link>
                             {isDoneTyping && <HamburgerExpander isClicked={projectsIsDown} setIsClicked={setProjectsIsDown} />}
-                        </li>
+                        </li> */}
                         <li className='overflow-hidden  duration-700' style={{
                             height: projectsIsDown ? `${projectsHeight}px` : '0'
                         }}>

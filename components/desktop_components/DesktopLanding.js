@@ -99,7 +99,7 @@ export default function DesktopLanding() {
                             </ul>
                         </li>
 
-                        <li className=" group flex w-full justify-between   hover:bg-opacity-65 duration-200">
+                        {/* <li className=" group flex w-full justify-between   hover:bg-opacity-65 duration-200">
                             <Link href={"/#projects"} className="w-full flex flex-col items-start font-main text-[4vw] tracking-[0.5rem] leading-tight h-[5vw] overflow-hidden mr-3 ">
                                 <p ref={projectRef} className={`duration-500 ${isDoneTyping && "group-hover:-translate-y-[15vw]"} `}></p>
                                 {isDoneTyping && <p className=" group-hover:-translate-y-[15vw] duration-500">projects</p>}
@@ -107,7 +107,7 @@ export default function DesktopLanding() {
                                 {isDoneTyping && <p className=" group-hover:-translate-y-[15vw] duration-500">projects</p>}
                             </Link>
                             {isDoneTyping && <HamburgerExpander isClicked={projectsIsDown} setIsClicked={setProjectsIsDown} />}
-                        </li>
+                        </li> */}
 
                         <li className="overflow-hidden duration-700" style={{
                             height: projectsIsDown ? `${projectsHeight}px` : '0'
